@@ -1,4 +1,4 @@
-# harry_potter_bot
+# harry-potter-bot
 
 ## author 
 
@@ -6,9 +6,8 @@ Dan Steinbrook: steinbrookdaniel at gmail
 
 ## screencap
 
-<!-- ![](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExYjkwYjM5MTNhNTA1YjQ1ODJjZmU0OTM2Mjc0M2U4YzM5ZWE3OGJhZSZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/xqI3R0AXyUUan5cTVR/giphy.gif) -->
+![](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExYjkwYjM5MTNhNTA1YjQ1ODJjZmU0OTM2Mjc0M2U4YzM5ZWE3OGJhZSZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/xqI3R0AXyUUan5cTVR/giphy.gif) 
 
-![](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMTBmNWZiYzFmZTkyNjM5MmE2NDZlNGVhYjgyYTI4ODg4NzE2YjExZiZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/45Ev7lTh3b5McZOaXf/giphy.gif)
 
 ## about
 
