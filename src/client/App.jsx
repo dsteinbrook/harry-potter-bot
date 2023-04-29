@@ -17,15 +17,16 @@ export default function App() {
   const [toggle, setToggle] = useState(false);
   const [char, setChar] = useState('Amara');
 
+  //initialize refs
+
+  const logEnd = useRef(null);
+  const didMount = useRef(false);
+
   //clear chat history when selected character is changed, passed as prop to CharSelect component
 
   const handleCharChange = (val) => {setChar(val);
     setHistory([]);
     setLog([]);};
-
-  const handleToggle = () => {
-    setToggle(!toggle);
-  };
 
   //submit handler for user input form, updates history and log state variables and clears input field
 
@@ -39,7 +40,9 @@ export default function App() {
 
   //useEffect hook to ensure fetchData doesn't run on page load
 
-  const didMount = useRef(false);
+  const handleToggle = () => {
+    setToggle(!toggle);
+  };
 
   useEffect(() => {
     if (didMount.current) {
@@ -49,6 +52,15 @@ export default function App() {
       didMount.current = true;
     }
   }, [toggle]);
+
+  //useEffect hook to automatically scroll to bottom of chat view when messages are updated
+  const scrollToBottom = () => {
+    logEnd.current?.scrollIntoView({behavior: 'auto'});
+  };
+
+  useEffect(() => {
+    scrollToBottom();}, 
+  );
 
   //fetch chatbot response from server
 
@@ -70,8 +82,8 @@ export default function App() {
       setLog([...log, `${char}: ${data.result}`]);
       setQueried(false);
     }).catch(
-      err => {console.log(err);
-        handleToggle();
+      err => {console.error(err);
+        // handleToggle();
       });
         
         
@@ -93,6 +105,7 @@ export default function App() {
   }
 
   const logDisplay = generateLogDisplay();
+ 
 
   //render method for main app page
 
@@ -113,12 +126,16 @@ export default function App() {
           <div>
             {logDisplay}
           </div>
-          <div style={{fontWeight: 'bold'}}>
-            {userInput ? `You: ${userInput}` : null}
-          </div>
           <div>
             {queried ? `${char}: ...` : null}
           </div>
+          <div style={{fontWeight: 'bold'}}>
+            {userInput ? `You: ${userInput}` : null}
+          </div>
+          <div ref={logEnd}>
+
+          </div>
+
         </div>
         <div className="form">
           <input type="text" 
