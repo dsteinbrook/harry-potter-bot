@@ -23,8 +23,6 @@ The app gives the ChatGPT API access to the character's knowledge about themselv
 
 Two methods are provided for vector database search: cosine similarity and training a Support Vector Machine classifier (see ```src/server/server.py```).
 
-The demo version uses the ChatGPT API, see ```README-TRAINING_OUTLINE.md``` for an outline of the process for training a custom chat language model.
-
 ## usage
 
 clone repo onto local machine and navigate to root directory
